@@ -1,8 +1,19 @@
 // Mehrad Hajati
+// This is a treasure hunting game where the player is on a 2d grid, each position in the grid is either North (N), South (S), East (E), West(W) or True(T)
+// The first four represent the compass direction to go and T represents the position where the treasure is
+// The game continues until the treasure is found and you win or you reach a position you have visited before and you lose or you move off the board.
+// You start at position 0,0 ie the top left position in grid
+// N takes you one row up, S takes you one row down, W takes you one column to the left and E takes you one column to the right
+// Input File format: - the first line is two positive integers seperated by a space represting the rows (R) and columns (C) respectively
+//                       - each of the next R lines contains C characters; the only characters that appear are N, S, W, E, or T (and there is only one T)
 
 import java.util.*;
 import java.io.*;
 
+/**
+ * Author: Mehrad Hajati
+ * Date: 2020/12/13
+ */
 public class TreasureHuntGame{
     
     //Constants 
@@ -69,6 +80,7 @@ public class TreasureHuntGame{
         }
     }// End of playGame method
 
+    
     public static void main(String[] args){
         System.out.println("Please type the path for your selected file");
         Scanner sc = new Scanner(System.in);
