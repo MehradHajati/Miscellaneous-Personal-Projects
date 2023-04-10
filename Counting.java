@@ -46,7 +46,7 @@ public class Counting{
     public static double atleastK(int TotalEvents, int K, double probability){
         // This method uses the combinations method to calculate the probability of an event happening atleast K times
         // This IF_ELSE statment is designed to make it the method more efficient as it can sometimes be easier to calculate the probability of undesired events and do 1 - undesired
-        if(TotalEvents/2 <= K){;
+        if(TotalEvents/2 <= K){
             double output = 0;
             for (int i = TotalEvents; i >= K; i--){
                 output += exactlyK(TotalEvents, i, probability);
@@ -87,6 +87,8 @@ public class Counting{
     }
 
     public static void main(String [] args){
-        System.out.println(atleastK(8, 6, 0.5));
+        double num = (double) 1 / (double) 6;
+        System.out.println(num);
+        System.out.println(atleastK(6, 1, 0.16666666666666666666));
     }
 }
